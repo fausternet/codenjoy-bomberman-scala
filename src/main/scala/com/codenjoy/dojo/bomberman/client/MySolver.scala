@@ -18,7 +18,7 @@ class MySolver extends Solver[MyBoard] {
 }
 
 object Main extends App {
-  val url = "http://bomberman.savytskyivasyl.com/codenjoy-contest/board/player/fgfbgffvfdsf?code=03453454355"
+  def url = "http://bomberman.savytskyivasyl.com/codenjoy-contest/board/player/fgfbgffvfdsf?code=03453454355"
   override def main(args: Array[String]): Unit = {
     WebSocketRunner.runClient(url, new MySolver, new MyBoard)
   }
