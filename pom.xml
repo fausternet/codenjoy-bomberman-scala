@@ -56,6 +56,11 @@
             <artifactId>fest-reflect</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.12.7</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -75,6 +80,20 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>4.4.0</version>
+                <configuration>
+                    <launchers>
+                        <launcher>
+                            <id>foo</id>
+                            <mainClass>com.codenjoy.dojo.bomberman.client.Main</mainClass>
+                        </launcher>
+                        <!-- you could define other launcher -->
+                    </launchers>
+                </configuration>
             </plugin>
         </plugins>
     </build>
